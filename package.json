@@ -1,0 +1,63 @@
+{
+  "name": "own-store-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OwnStore API",
+  "scripts": {
+    "start:init": "TZ=utc nodemon src/index.ts",
+    "start:local": "STORE_API_ENV=local npm run start:init",
+    "start:prod": "STORE_API_ENV=production npm run start:init",
+    "build": "tsc --project tsconfig.json",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "start": "TZ=utc node dist/index"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "@hapi/boom": "^9.1.2",
+    "@hapi/hapi": "^20.1.2",
+    "@hapi/inert": "^6.0.3",
+    "@hapi/joi": "^17.1.1",
+    "@hapi/vision": "^6.0.1",
+    "@sentry/node": "^6.11.0",
+    "@sentry/tracing": "^6.11.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "hapi-pino": "^8.3.0",
+    "hapi-swagger": "^14.1.0",
+    "inversify": "^5.0.5",
+    "inversify-inject-decorators": "^3.1.0",
+    "ioredis": "^4.27.8",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "ms": "^2.1.3",
+    "mysql2": "^2.2.5",
+    "pino": "^6.11.2",
+    "pino-pretty": "^4.7.1",
+    "ramda": "^0.27.1",
+    "redis": "^3.1.2",
+    "reflect-metadata": "^0.1.13",
+    "request-ip": "^2.1.3",
+    "stripe": "^8.165.0",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "typeorm": "^0.2.31",
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.1",
+    "@types/hapi__hapi": "^20.0.5",
+    "@types/ioredis": "^4.26.7",
+    "@types/jsonwebtoken": "^8.5.1",
+    "@types/node": "^14.14.37",
+    "@types/pino": "^6.3.6",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "eslint": "^5.15.1",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^1.19.1"
+  }
+}

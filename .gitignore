@@ -1,0 +1,12 @@
+node_modules
+
+# Mac OSX
+.DS_Store
+
+.idea
+dist
+coverage/
+
+extra
+offline_api
+spec
